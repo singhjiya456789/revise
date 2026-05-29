@@ -36,22 +36,41 @@
 #     print("odd")
 
 #student mark analysis
-name=input("Enter the Student name:")
+# name=input("Enter the Student name:")
 
-math=int(input("Enter the Math marks:"))
-sci=int(input("Enter the science marks:"))
-eng= int(input("Enter the English marks:"))
-total=math+sci+eng
-percent=(total/300)*100
+# math=int(input("Enter the Math marks:"))
+# sci=int(input("Enter the science marks:"))
+# eng= int(input("Enter the English marks:"))
+# total=math+sci+eng
+# percent=(total/300)*100
 
-print("TOtal MArks:",total)
-print("Your PErcentage:",percent)
+# print("TOtal MArks:",total)
+# print("Your PErcentage:",percent)
 
-if percent >=90:
-    print("you got A")
-elif percent >=75:
-    print("YOU got B")
-elif percent >=50:
-    print("YOu got C")
-else:
-    print("Failed")
+# if percent >=90:
+#     print("you got A")
+# elif percent >=75:
+#     print("YOU got B")
+# elif percent >=50:
+#     print("YOu got C")
+# else:
+#     print("Failed")
+
+# # numpy 
+# import numpy as np
+
+# arr = np.array([23,45,38,19,50])
+# print("maximum:",arr.max())
+# print("minimum:",arr.min())
+# print("mean:",arr.mean())
+
+import pandas as pd
+
+data=pd.read_csv("train.csv")
+
+
+df=pd.DataFrame(data)
+print(df.isnull())
+print("Highest sale:-")
+print(df["Sales"].max())
+print(df.groupby("Category")["Sales"].sum())
