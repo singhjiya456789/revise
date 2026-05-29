@@ -65,12 +65,25 @@
 # print("mean:",arr.mean())
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 data=pd.read_csv("train.csv")
-
 
 df=pd.DataFrame(data)
 print(df.isnull())
 print("Highest sale:-")
 print(df["Sales"].max())
-print(df.groupby("Category")["Sales"].sum())
+categories=df.groupby("Category")["Sales"].sum()
+
+saless= df["Sales"]
+region=df["Region"]
+plt.bar(region, saless)
+plt.title("Sales Chart")
+plt.xlabel("Region")
+plt.ylabel("Sales")
+plt.show()
+plt.pie(categories.values,
+        labels=categories.index,
+        autopct="%1.1f%% ")
+plt.title("dfsfsfsdf")
+plt.show()
