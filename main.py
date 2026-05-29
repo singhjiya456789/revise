@@ -29,11 +29,29 @@
 
 #even odd 
 
-a= int(input("Enter the no. :"))
-if a %2 ==0:
-    print("even")
-    break
-else:
-    print("odd")
-    
+# a= int(input("Enter the no. :"))
+# if a %2 ==0:
+#     print("even")
+# else:
+#     print("odd")
 
+#student mark analysis
+name=input("Enter the Student name:")
+
+math=int(input("Enter the Math marks:"))
+sci=int(input("Enter the science marks:"))
+eng= int(input("Enter the English marks:"))
+total=math+sci+eng
+percent=(total/300)*100
+
+print("TOtal MArks:",total)
+print("Your PErcentage:",percent)
+
+if percent >=90:
+    print("you got A")
+elif percent >=75:
+    print("YOU got B")
+elif percent >=50:
+    print("YOu got C")
+else:
+    print("Failed")
